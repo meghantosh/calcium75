@@ -1,0 +1,242 @@
+@font-face { font-family: Droid_Serif; src: url('type/Droid_Serif/DroidSerif.ttf'); } 
+@font-face { font-family: Muli; src: url('type/Muli/Muli-Regular.ttf'); } 
+
+a.movie:link {color: #0b6576; text-decoration: none; }
+a.movie:visited {color: #0b6576; text-decoration: none; }
+a.movie:hover {color: #0b6576; text-decoration: underline; }
+a.movie:active {color: #0b6576; }
+
+a.topLink:link {color:#caf6fe; text-decoration: none; }
+a.topLink:visited {color:#caf6fe; text-decoration: none; }
+a.topLink:hover {color:#caf6fe; text-decoration: underline; }
+a.topLink:active {color:#caf6fe; text-decoration: none; }
+
+table 
+{
+	border: 0px none;
+	border-spacing:0px; 
+	border-collapse: separate;
+	padding-left: 0pt;
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+	padding-right: 0pt;
+	margin: 0px;
+	margin-left: 0px;
+}
+
+td 
+{
+
+	padding:0px; 
+	border:0px none;
+	margin: 0px;
+	margin-left: 0px;
+}
+
+
+body {
+
+background: #D4EFFE; 
+color:#976502; 
+
+top-margin: 0px; 
+left-margin: 0px
+
+}
+
+/*
+.reelHolder
+{
+	background-image:url('images/triangleBG.jpg');
+	border: 0px none;
+	padding-left: 0pt;
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+	padding-right: 0pt;
+	margin: 0px;
+	margin-left: 0px;
+}
+
+.divLook
+{
+	padding-left: 0pt;
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+	padding-right: 0pt;
+	position: absolute;
+	top: -8000;
+	left: 18;
+	background-color: #91ddde;
+	z-index: 4;
+
+}
+*/
+
+
+#c75flash {
+	display: block;
+
+}
+
+#reel_div {
+	position: relative;
+	z-index: -1;
+	display: none;
+	visibility: hidden;
+	
+
+}
+
+#info_div {
+	position: relative;
+	z-index: 100;
+	display: block;
+	visibility: visible;
+	
+}
+
+.reelHolder
+{
+	border: 0px none;
+	padding: 0pt;
+	margin: 0px;
+	margin-left: 0px;
+}
+
+
+
+
+.divLook
+{
+	padding: 0pt;
+	margin: 0px;
+	margin-left: 0px;
+	background-image:url('images/portHtml_sm.jpg');
+	width: 960;
+	
+}
+	
+
+		
+	
+	
+
+img {
+	margin: 0px;
+	padding: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+    display: inline;
+}
+	
+	
+.divcam
+{
+	font-size: 2px;
+	background-color:#D4EFFE;
+	color: #806a45;
+	padding-left: 0pt;
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+}	
+	
+.divider
+{
+	background-color: #D4F2FE;
+	border: 1px solid #C1E1F3;
+	color: #0b6576;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	
+}
+
+.topdivider
+{
+	background-color: #D4EFFE;
+	color: #caf6fe;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+
+.divider-linkout
+{
+	text-align: right;
+	
+}
+
+
+
+.info {
+	font-family: "Muli", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+
+
+.behindwork
+{
+	background-color: #D4EFFE;
+	color: #572a2a;
+}
+.projectlist {
+	font-family: "Muli", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: 000000;
+}
+
+.caption {
+	font-family: "Muli", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.topcaption {
+	font-family: "Muli", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-style: light;
+	line-height: normal;
+	font-weight: lighter;
+	font-variant: normal;
+}
+
+
+.header
+{
+	font-family: "Muli", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 14px;
+	font-style: bold;
+	line-height: normal;
+	font-weight: bolder;
+	padding-top: 3px;
+	padding-bottom: 3px;
+
+	
+}
+.colors {
+	margin: 0px;
+	padding: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	color: #996C2A;
+	background-color: #D4EFFE;
+}

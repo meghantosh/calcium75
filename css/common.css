@@ -1,0 +1,28 @@
+.new_logo {
+   position: fixed;
+   top: 10px;
+   left: 0%;
+   font-family: "brandon-grotesque-1","brandon-grotesque-2","LeagueGothicRegular",Helvetica,sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: medium;
+    color: #ffffff!important;
+    background-color: #0addd3;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom-color: #929ba5;
+	border-bottom-style: none;
+    border-bottom-width: 1px;
+    letter-spacing: .5px;
+
+   z-index: 125;
+    
+    
+}
+
+.new_logo a {
+    
+    color:#ffffff;
+}
+    

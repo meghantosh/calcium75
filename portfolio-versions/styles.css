@@ -1,0 +1,32 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+.divider {
+	background-color: #2C1708;
+	color: #CCCDAD;
+	padding: 5px;
+		font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+.projectlist {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: 3e2810;
+}
+.colors {
+	color: #996C2A;
+	background-color: #CCCDAD;
+}
+.dividerGold {
+	background-color: #AC6409;
+	color: #D5D5C1;
+}

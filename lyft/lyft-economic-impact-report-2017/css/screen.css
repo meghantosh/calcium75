@@ -1,0 +1,2578 @@
+/*
+---------------------------------------------------------------------------------------
+MASTER SCSS FILE
+
+--------------
+NOTES
+--------------
+This file contains @import includes for all of the files that are compiled into the
+master styles.css file
+
+--------------
+CONTENTS
+--------------
+## FRAMEWORK
+## MODULES
+
+---------------------------------------------------------------------------------------
+*/
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+* {
+  font-family: 'sofia-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+
+html {
+  font-family: "sofia pro", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 16px;
+  color: #201547;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: "sofia pro", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  color: #201547;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0; }
+
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: .9;
+  margin: 0px; }
+
+h2 {
+  font-size: 54px;
+  font-size: 3.375rem;
+  font-weight: 700;
+  line-height: .9;
+  margin: 0px; }
+
+h3 {
+  font-size: 35px;
+  font-size: 2.1875rem;
+  font-weight: 700; }
+
+h4 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 700; }
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #352384; }
+
+h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700; }
+
+p {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-top: 10px; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-position: outside;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.2s; }
+
+a:hover,
+a:active {
+  color: #ff00be;
+  text-decoration: underline; }
+
+dd,
+dt,
+li,
+p,
+ul {
+  letter-spacing: 0; }
+
+.small,
+small {
+  font-size: 88%; }
+
+.large-copy {
+  font-size: 60px;
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0; }
+  @media only screen and (min-width: 600px) {
+    .large-copy {
+      font-size: 60px;
+      font-size: 3.75rem; } }
+  @media only screen and (min-width: 992px) {
+    .large-copy {
+      font-size: 64px;
+      font-size: 4rem; } }
+
+@media only screen and (max-width: 600px) {
+  .city-block-01 .large-copy {
+    font-size: 42px;
+    font-size: 2.625rem;
+    margin-right: -20px; } }
+
+@media only screen and (max-width: 600px) {
+  .city-block-02 .large-copy {
+    font-size: 50px;
+    font-size: 3.125rem; } }
+
+@media only screen and (max-width: 600px) {
+  .passenger-block-01 .large-copy {
+    font-size: 37px;
+    font-size: 2.3125rem; } }
+
+@media only screen and (min-width: 600px) {
+  .passenger-block-01 .large-copy {
+    font-size: 50px;
+    font-size: 3.125rem; } }
+
+@media only screen and (max-width: 600px) {
+  .driver-block-01 .large-copy {
+    font-size: 45px;
+    font-size: 2.8125rem; } }
+
+@media only screen and (min-width: 600px) {
+  .driver-block-01 .large-copy {
+    font-size: 50px;
+    font-size: 3.125rem; } }
+
+@media only screen and (min-width: 992px) {
+  .driver-block-01 .large-copy {
+    font-size: 64px;
+    font-size: 4rem; } }
+
+@media only screen and (max-width: 600px) {
+  .driver-block-03 .large-copy {
+    font-size: 40px;
+    font-size: 2.5rem; } }
+
+.large-number {
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 0.2rem 0; }
+  @media only screen and (max-width: 600px) {
+    .large-number {
+      font-size: 50px;
+      font-size: 3.125rem; } }
+  @media only screen and (min-width: 600px) {
+    .large-number {
+      font-size: 55px;
+      font-size: 3.4375rem; } }
+
+.intro-copy {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1rem; }
+  @media only screen and (max-width: 600px) {
+    .intro-copy {
+      font-size: 30px;
+      font-size: 1.875rem; } }
+  @media only screen and (min-width: 600px) {
+    .intro-copy {
+      font-size: 42px;
+      font-size: 2.625rem; } }
+
+#lyft-community h5, #national-buckets h5 {
+  color: #fff; }
+
+#national-map .large-number + h5 {
+  margin-top: 0em; }
+
+#national-buckets h2 {
+  color: #ff00be;
+  padding-bottom: .1em; }
+
+#national-buckets a {
+  font-size: medium;
+  line-height: 4em; }
+
+#national-map {
+  color: #201547; }
+  #national-map .large-number {
+    text-align: left;
+    margin: 0.75em 0 0;
+    color: #ff00bf;
+    font-size: 3em;
+    letter-spacing: -.05em; }
+    @media only screen and (min-width: 600px) {
+      #national-map .large-number {
+        margin: 1em 0 0; } }
+    #national-map .large-number + p {
+      max-width: 200px;
+      text-align: left;
+      margin: 0 0 0.75em; }
+      @media only screen and (min-width: 600px) {
+        #national-map .large-number + p {
+          margin: 0 0 1em; } }
+
+#national-map .large-number {
+  color: #352384; }
+
+#national-map p {
+  color: #352384;
+  font-weight: 500; }
+
+#national-map a {
+  color: #352384;
+  text-decoration: none; }
+
+#city-data .large-number + p:not(.sub-number) {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 0 2em; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+a,
+:focus {
+  outline: none !important;
+  color: #fff;
+  text-decoration: underline; }
+
+a.btn {
+  text-decoration: none; }
+
+.right-align {
+  text-align: right; }
+
+.flex-right-middle {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.flex-middle {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
+/* ========================================= */
+/* ======= Override take.lyft styles ======= */
+/* ========================================= */
+#site-navigation {
+  background-color: transparent;
+  position: initial; }
+
+.site-logo {
+  float: none; }
+
+.jumbotron .container,
+.jumbotron div {
+  height: 100%; }
+
+.jumbotron h1 {
+  text-shadow: none;
+  position: initial; }
+
+.jumbotron h1,
+.jumbotron p {
+  text-align: left; }
+
+figure {
+  margin: 0; }
+
+footer#page-footer {
+  background: #333447;
+  z-index: 1;
+  position: relative; }
+
+.btn,
+nav {
+  letter-spacing: 0;
+  text-transform: initial; }
+
+.main .btn,
+.main .btn-primary,
+.main button {
+  background-color: #ff00be;
+  border: none; }
+  .main .btn:hover,
+  .main .btn-primary:hover,
+  .main button:hover {
+    color: #fff;
+    background-color: #C600BB; }
+
+.btn,
+.btn-primary,
+button {
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding: 0.9em 3.2em 1em; }
+  .btn:hover,
+  .btn-primary:hover,
+  button:hover {
+    background-color: #fff;
+    color: #333447; }
+
+.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.site-logo .logo-element:before,
+.site-logo a:before {
+  padding-top: 20px;
+  font-size: 48px; }
+
+/* ====================== */
+/* ======= Images ======= */
+/* ====================== */
+.jumbotron {
+  background-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.maintain-aspect {
+  /* width: 100%;
+    height: auto;*/ }
+
+.inline-image {
+  margin-left: -15px; }
+
+.driver-block-04 .inline-image {
+  margin-left: -100px; }
+
+.main-city-image {
+  background: url(../img/main-city-impact.png) no-repeat 0% 35%/cover; }
+
+.main-driver-image {
+  background: url(../img/main-driver-impact.png) no-repeat 20% 50%/cover; }
+
+.main-passenger-image {
+  background: url(../img/main-passenger-impact.png) no-repeat 100% center/cover; }
+
+.main-passenger-image,
+.main-driver-image,
+.main-city-image {
+  padding: 0px;
+  margin: 30px 0px -30px; }
+  @media only screen and (max-width: 992px) {
+    .main-passenger-image,
+    .main-driver-image,
+    .main-city-image {
+      height: 440px; } }
+
+.main-passenger-image img,
+.main-driver-image img,
+.main-city-image img {
+  opacity: 0; }
+
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .jumbotron {
+    background-image: none;
+    background-position: 36% center; } }
+
+/* Large Devices, Wide Screens */
+/**
+*
+* HEADER
+*
+*/
+.jumbotron {
+  background-color: #fff; }
+  .jumbotron .jumbo-inner-contain {
+    height: auto;
+    position: absolute;
+    top: 52%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    max-width: 1050px; }
+    .jumbotron .jumbo-inner-contain h1 {
+      color: #ff00be;
+      margin-top: 0; }
+    .jumbotron .jumbo-inner-contain span,
+    .jumbotron .jumbo-inner-contain h5 {
+      color: #352384; }
+
+#site-navigation {
+  position: absolute; }
+  #site-navigation .site-logo {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .2s ease-out, -webkit-transform .2s ease;
+    transition: transform .2s ease, opacity .2s ease-out;
+    transition: transform .2s ease, opacity .2s ease-out, -webkit-transform .2s ease;
+    -webkit-transition: transform .2s ease, opacity .2s ease-out; }
+    #site-navigation .site-logo a {
+      padding-top: 20px;
+      height: auto; }
+      #site-navigation .site-logo a:before {
+        padding-top: 0;
+        content: "";
+        float: left;
+        display: block;
+        background-image: url(../img/lyft-logo.svg);
+        width: 120px;
+        height: 30px;
+        background-repeat: no-repeat;
+        /*background-position: center;*/
+        background-size: contain;
+        background-color: #fff; }
+
+[data-jumbotronasaurus=true] #page-header {
+  height: 80%; }
+
+/* ============================ */
+/* ======= MAIN CONTENT ======= */
+/* ============================ */
+main {
+  overflow: hidden; }
+
+section {
+  padding-top: 6em;
+  padding-bottom: 6em; }
+
+.btn,
+.btn-primary,
+button {
+  color: #fff;
+  background-color: #ff00be;
+  border: 0; }
+
+.btn:hover,
+.btn-primary:hover,
+button:hover {
+  background-color: #C600BB;
+  color: #fff; }
+
+.btn {
+  border-radius: 0;
+  padding: 0.5em 2em 0.8em; }
+  .btn.disabled {
+    opacity: 0.25;
+    filter: alpha(opacity=25); }
+
+.pre-footer-cta {
+  background-color: #ff00be;
+  border: 0;
+  cursor: initial;
+  background-image: none;
+  padding: 2em 0; }
+  .pre-footer-cta a {
+    color: #fff; }
+    .pre-footer-cta a:hover:after {
+      -webkit-animation-delay: 0s;
+      -webkit-animation-duration: 0.4s;
+      -webkit-animation-name: hopRight;
+      -webkit-transition-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+      /* this prevents the animation from restarting! */
+      -moz-animation-delay: 0s;
+      -moz-animation-duration: 0.4s;
+      -moz-animation-name: hopRight;
+      -webkit-transition-timing-function: ease-in-out;
+      -moz-animation-fill-mode: both;
+      /* this prevents the animation from restarting! */
+      -o-animation-delay: 0s;
+      -o-animation-duration: 0.4s;
+      -o-animation-name: hopRight;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-animation-fill-mode: both;
+      /* this prevents the animation from restarting! */
+      animation-delay: 0s;
+      animation-duration: 0.4s;
+      animation-name: hopRight;
+      -webkit-transition-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      /* this prevents the animation from restarting! */ }
+    .pre-footer-cta a:after {
+      content: url(../img/arrow-right.svg);
+      width: 22px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 1em;
+      transition: -webkit-transform .2s ease-out;
+      transition: transform .2s ease-out;
+      transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+      -webkit-transition: transform .2s ease-out; }
+
+.clearfix {
+  clear: both; }
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+#scroll-widget {
+  display: block;
+  position: fixed;
+  right: 1em;
+  bottom: 2em;
+  z-index: 20;
+  -webkit-transform: translateY(350%);
+          transform: translateY(350%);
+  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.67, 1.38);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.67, 1.38);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.67, 1.38), -webkit-transform 0.25s cubic-bezier(0, 0, 0.67, 1.38); }
+  #scroll-widget a {
+    padding: 1em 1.7em;
+    border-radius: 50%;
+    background-color: #ff00be;
+    background-image: url(../img/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.25em; }
+  #scroll-widget.reveal {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+/* ====================== */
+/* ======= FOOTER ======= */
+/* ====================== */
+#module-carpool h3:last-of-type {
+  margin-top: 0; }
+
+footer {
+  margin-top: 0; }
+
+.primary-footer-nav li {
+  margin-top: 60px;
+  display: inline-block; }
+
+.primary-footer-nav:before {
+  content: none; }
+
+li [class*=" icon-"],
+li [class^=icon-] {
+  width: 2em; }
+
+.icon-twitter {
+  height: 2rem;
+  width: 2rem;
+  background-image: url("../img/icon-twitter.svg");
+  background-repeat: no-repeat;
+  margin: 0 0.5rem; }
+
+.icon-facebook {
+  height: 2rem;
+  width: 2rem;
+  background-image: url("../img/icon-facebook.svg");
+  background-repeat: no-repeat;
+  margin: 0 0.5rem; }
+
+.icon-instagram {
+  height: 2rem;
+  width: 2rem;
+  background-image: url("../img/icon-instagram.svg");
+  background-repeat: no-repeat;
+  margin: 0 0.5rem; }
+
+.icon-facebook:before,
+.icon-twitter:before,
+.icon-instagram:before {
+  content: ""; }
+
+#national-buckets {
+  background-color: #352384;
+  color: #fff; }
+
+#national-buckets .col-md-4 {
+  padding-right: 31px; }
+
+#national-map {
+  background-color: #fff;
+  /*
+    .row:nth-child(2) {
+	    padding-bottom: 2em;
+		border-bottom: solid 1px #352384;
+	    
+    }*/ }
+  #national-map h1 {
+    color: #ff00be; }
+  #national-map .large-number {
+    font-size: 2.5em; }
+  #national-map .large-map-container {
+    position: relative; }
+    #national-map .large-map-container .large-map {
+      background-color: #fff;
+      min-height: 600px;
+      background: url(../img/plain-map.svg) no-repeat center center; }
+    #national-map .large-map-container .row-percents {
+      pointer-events: none;
+      position: relative; }
+      @media only screen and (min-width: 992px) {
+        #national-map .large-map-container .row-percents {
+          position: absolute;
+          min-height: 600px; } }
+      #national-map .large-map-container .row-percents [class^="percent"] {
+        max-width: 110px; }
+      #national-map .large-map-container .row-percents .percent-01,
+      #national-map .large-map-container .row-percents .percent-02,
+      #national-map .large-map-container .row-percents .percent-03 {
+        float: left;
+        width: 100%;
+        text-align: center; }
+        @media only screen and (max-width: 992px) {
+          #national-map .large-map-container .row-percents .percent-01,
+          #national-map .large-map-container .row-percents .percent-02,
+          #national-map .large-map-container .row-percents .percent-03 {
+            max-width: 33%;
+            margin-top: 1em; } }
+        @media only screen and (max-width: 600px) {
+          #national-map .large-map-container .row-percents .percent-01,
+          #national-map .large-map-container .row-percents .percent-02,
+          #national-map .large-map-container .row-percents .percent-03 {
+            clear: both;
+            max-width: 100%; } }
+        @media only screen and (min-width: 600px) {
+          #national-map .large-map-container .row-percents .percent-01,
+          #national-map .large-map-container .row-percents .percent-02,
+          #national-map .large-map-container .row-percents .percent-03 {
+            width: 33%; } }
+        @media only screen and (min-width: 992px) {
+          #national-map .large-map-container .row-percents .percent-01,
+          #national-map .large-map-container .row-percents .percent-02,
+          #national-map .large-map-container .row-percents .percent-03 {
+            position: absolute;
+            text-align: left; } }
+      #national-map .large-map-container .row-percents .percent-01 {
+        top: 78%;
+        left: 1%; }
+      #national-map .large-map-container .row-percents .percent-02 {
+        top: 0;
+        right: 15%; }
+      #national-map .large-map-container .row-percents .percent-03 {
+        top: 78%;
+        right: 1%; }
+  #national-map .city-selection {
+    -webkit-column-count: 4;
+            column-count: 4;
+    padding-top: 30px;
+    padding-bottom: 28px; }
+    #national-map .city-selection li > a {
+      padding: 0px; }
+      @media only screen and (max-width: 992px) {
+        #national-map .city-selection li > a {
+          font-size: 1.2em; } }
+      @media only screen and (max-width: 600px) {
+        #national-map .city-selection li > a {
+          font-size: 1.2em; } }
+      @media only screen and (min-width: 600px) {
+        #national-map .city-selection li > a {
+          font-size: 1.2em; } }
+      @media only screen and (min-width: 992px) {
+        #national-map .city-selection li > a {
+          font-size: 1.3em; } }
+  #national-map h6 {
+    margin-top: 0em;
+    font-size: 16px;
+    font-size: 1rem;
+    color: #352384; }
+
+#lyft-community {
+  background-color: #201547;
+  color: #fff;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  #lyft-community li {
+    list-style: none; }
+
+#city-nav {
+  transition: background-color 300ms ease, color 300ms ease;
+  overflow: hidden; }
+  #city-nav button:focus {
+    box-shadow: none; }
+  #city-nav .navbar-toggle-container {
+    width: 100%;
+    background-color: #201547;
+    float: left;
+    overflow: hidden; }
+    #city-nav .navbar-toggle-container .navbar-toggle {
+      cursor: auto;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      position: relative;
+      z-index: 100;
+      float: left;
+      padding: 10px;
+      margin: 15px 0px 15px 15px;
+      background-color: transparent;
+      border: 0;
+      border-radius: 4px;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+      transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+      transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+      float: left; }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar {
+        background-color: #fff;
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px; }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar {
+        background-color: #ff00be; }
+        #city-nav .navbar-toggle-container .navbar-toggle .icon-bar + .icon-bar {
+          margin-top: 4px; }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(2),
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(3),
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(4) {
+        transition: -webkit-transform .2s ease-out;
+        transition: transform .2s ease-out;
+        transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(2) {
+        -webkit-transform: translateY(0) rotate(0);
+                transform: translateY(0) rotate(0); }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(3) {
+        opacity: 1;
+        filter: alpha(opacity=100); }
+      #city-nav .navbar-toggle-container .navbar-toggle .icon-bar:nth-of-type(4) {
+        -webkit-transform: translateY(0) rotate(0);
+                transform: translateY(0) rotate(0); }
+  #city-nav .nav {
+    clear: both;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 200ms ease-out;
+    background: linear-gradient(90deg, rgba(53, 35, 132, 0.95), rgba(255, 0, 190, 0.95)); }
+    #city-nav .nav li {
+      text-transform: capitalize;
+      width: 50%;
+      text-align: center;
+      float: left;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      transition: opacity 500ms ease;
+      margin: 0; }
+      #city-nav .nav li a {
+        padding: 20px 0;
+        padding: 2.5vh 0; }
+      #city-nav .nav li.active {
+        background-color: #601c90; }
+      #city-nav .nav li a {
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none; }
+      @media only screen and (min-width: 992px) {
+        #city-nav .nav li {
+          width: 25%; } }
+  #city-nav .section-wrapper {
+    position: relative;
+    float: left;
+    display: none; }
+  #city-nav .current-section,
+  #city-nav .prev-section,
+  #city-nav .next-section {
+    letter-spacing: 0;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #201547;
+    text-transform: capitalize;
+    float: left;
+    margin: 15px 15px 15px 0;
+    padding: 5px 10px; }
+  #city-nav .prev-section,
+  #city-nav .next-section {
+    position: absolute;
+    left: 0;
+    text-transform: capitalize; }
+  #city-nav .prev-section {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  #city-nav .next-section {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+  #city-nav.is_stuck {
+    z-index: 21; }
+    #city-nav.is_stuck .section-wrapper {
+      display: block; }
+    #city-nav.is_stuck .current-section,
+    #city-nav.is_stuck .prev-section,
+    #city-nav.is_stuck .next-section {
+      color: #ff00be;
+      white-space: nowrap; }
+    #city-nav.is_stuck .navbar-toggle-container {
+      background-color: #352384;
+      overflow: visible; }
+      #city-nav.is_stuck .navbar-toggle-container .navbar-toggle {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        cursor: pointer; }
+    #city-nav.is_stuck.open {
+      overflow: visible; }
+      #city-nav.is_stuck.open .nav {
+        max-height: 800px; }
+        #city-nav.is_stuck.open .nav li:nth-of-type(1) {
+          -webkit-animation-delay: 0.005s;
+          -webkit-animation-duration: 0.255s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.005s;
+          -moz-animation-duration: 0.255s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.005s;
+          -o-animation-duration: 0.255s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.005s;
+          animation-duration: 0.255s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(2) {
+          -webkit-animation-delay: 0.01s;
+          -webkit-animation-duration: 0.26s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.01s;
+          -moz-animation-duration: 0.26s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.01s;
+          -o-animation-duration: 0.26s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.01s;
+          animation-duration: 0.26s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(3) {
+          -webkit-animation-delay: 0.015s;
+          -webkit-animation-duration: 0.265s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.015s;
+          -moz-animation-duration: 0.265s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.015s;
+          -o-animation-duration: 0.265s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.015s;
+          animation-duration: 0.265s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(4) {
+          -webkit-animation-delay: 0.02s;
+          -webkit-animation-duration: 0.27s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.02s;
+          -moz-animation-duration: 0.27s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.02s;
+          -o-animation-duration: 0.27s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.02s;
+          animation-duration: 0.27s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(5) {
+          -webkit-animation-delay: 0.025s;
+          -webkit-animation-duration: 0.275s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.025s;
+          -moz-animation-duration: 0.275s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.025s;
+          -o-animation-duration: 0.275s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.025s;
+          animation-duration: 0.275s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(6) {
+          -webkit-animation-delay: 0.03s;
+          -webkit-animation-duration: 0.28s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.03s;
+          -moz-animation-duration: 0.28s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.03s;
+          -o-animation-duration: 0.28s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.03s;
+          animation-duration: 0.28s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(7) {
+          -webkit-animation-delay: 0.035s;
+          -webkit-animation-duration: 0.285s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.035s;
+          -moz-animation-duration: 0.285s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.035s;
+          -o-animation-duration: 0.285s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.035s;
+          animation-duration: 0.285s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(8) {
+          -webkit-animation-delay: 0.04s;
+          -webkit-animation-duration: 0.29s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.04s;
+          -moz-animation-duration: 0.29s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.04s;
+          -o-animation-duration: 0.29s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.04s;
+          animation-duration: 0.29s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(9) {
+          -webkit-animation-delay: 0.045s;
+          -webkit-animation-duration: 0.295s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.045s;
+          -moz-animation-duration: 0.295s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.045s;
+          -o-animation-duration: 0.295s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.045s;
+          animation-duration: 0.295s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(10) {
+          -webkit-animation-delay: 0.05s;
+          -webkit-animation-duration: 0.3s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.05s;
+          -moz-animation-duration: 0.3s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.05s;
+          -o-animation-duration: 0.3s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.05s;
+          animation-duration: 0.3s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(11) {
+          -webkit-animation-delay: 0.055s;
+          -webkit-animation-duration: 0.305s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.055s;
+          -moz-animation-duration: 0.305s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.055s;
+          -o-animation-duration: 0.305s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.055s;
+          animation-duration: 0.305s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(12) {
+          -webkit-animation-delay: 0.06s;
+          -webkit-animation-duration: 0.31s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.06s;
+          -moz-animation-duration: 0.31s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.06s;
+          -o-animation-duration: 0.31s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.06s;
+          animation-duration: 0.31s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(13) {
+          -webkit-animation-delay: 0.065s;
+          -webkit-animation-duration: 0.315s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.065s;
+          -moz-animation-duration: 0.315s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.065s;
+          -o-animation-duration: 0.315s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.065s;
+          animation-duration: 0.315s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(14) {
+          -webkit-animation-delay: 0.07s;
+          -webkit-animation-duration: 0.32s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.07s;
+          -moz-animation-duration: 0.32s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.07s;
+          -o-animation-duration: 0.32s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.07s;
+          animation-duration: 0.32s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(15) {
+          -webkit-animation-delay: 0.075s;
+          -webkit-animation-duration: 0.325s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.075s;
+          -moz-animation-duration: 0.325s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.075s;
+          -o-animation-duration: 0.325s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.075s;
+          animation-duration: 0.325s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(16) {
+          -webkit-animation-delay: 0.08s;
+          -webkit-animation-duration: 0.33s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.08s;
+          -moz-animation-duration: 0.33s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.08s;
+          -o-animation-duration: 0.33s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.08s;
+          animation-duration: 0.33s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(17) {
+          -webkit-animation-delay: 0.085s;
+          -webkit-animation-duration: 0.335s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.085s;
+          -moz-animation-duration: 0.335s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.085s;
+          -o-animation-duration: 0.335s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.085s;
+          animation-duration: 0.335s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(18) {
+          -webkit-animation-delay: 0.09s;
+          -webkit-animation-duration: 0.34s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.09s;
+          -moz-animation-duration: 0.34s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.09s;
+          -o-animation-duration: 0.34s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.09s;
+          animation-duration: 0.34s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(19) {
+          -webkit-animation-delay: 0.095s;
+          -webkit-animation-duration: 0.345s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.095s;
+          -moz-animation-duration: 0.345s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.095s;
+          -o-animation-duration: 0.345s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.095s;
+          animation-duration: 0.345s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(20) {
+          -webkit-animation-delay: 0.1s;
+          -webkit-animation-duration: 0.35s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.1s;
+          -moz-animation-duration: 0.35s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.1s;
+          -o-animation-duration: 0.35s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.1s;
+          animation-duration: 0.35s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(21) {
+          -webkit-animation-delay: 0.105s;
+          -webkit-animation-duration: 0.355s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.105s;
+          -moz-animation-duration: 0.355s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.105s;
+          -o-animation-duration: 0.355s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.105s;
+          animation-duration: 0.355s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        #city-nav.is_stuck.open .nav li:nth-of-type(22) {
+          -webkit-animation-delay: 0.11s;
+          -webkit-animation-duration: 0.36s;
+          -webkit-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -webkit-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -moz-animation-delay: 0.11s;
+          -moz-animation-duration: 0.36s;
+          -moz-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -moz-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          -o-animation-delay: 0.11s;
+          -o-animation-duration: 0.36s;
+          -o-animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          -o-animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          animation-delay: 0.11s;
+          animation-duration: 0.36s;
+          animation-name: menuUpIn;
+          -webkit-transition-timing-function: ease-out;
+          animation-fill-mode: both;
+          /* this prevents the animation from restarting! */
+          opacity: 1;
+          filter: alpha(opacity=100); }
+        @media only screen and (min-width: 992px) {
+          #city-nav.is_stuck.open .nav {
+            max-height: 500px;
+            overflow-y: visible;
+            overflow: visible; } }
+      #city-nav.is_stuck.open .navbar-toggle {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        transition: -webkit-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+        #city-nav.is_stuck.open .navbar-toggle .icon-bar:nth-of-type(2) {
+          -webkit-transform: translateY(6px) rotate(45deg);
+                  transform: translateY(6px) rotate(45deg); }
+        #city-nav.is_stuck.open .navbar-toggle .icon-bar:nth-of-type(3) {
+          opacity: 0;
+          filter: alpha(opacity=0); }
+        #city-nav.is_stuck.open .navbar-toggle .icon-bar:nth-of-type(4) {
+          -webkit-transform: translateY(-6px) rotate(-45deg);
+                  transform: translateY(-6px) rotate(-45deg); }
+
+#city-data {
+  background-color: #ff00be;
+  color: #fff;
+  padding-top: 1em; }
+  #city-data .curtain {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #201547;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: none;
+    transition: opacity 200ms ease; }
+    #city-data .curtain.down {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+  #city-data .large-copy,
+  #city-data h5 {
+    margin-top: 90px;
+    color: #352384; }
+  #city-data .sub-number {
+    margin: 0;
+    margin-bottom: 2em; }
+  #city-data .passenger-block-01 > .row,
+  #city-data .driver-block-01 > .row,
+  #city-data .city-block-01 > .row {
+    margin-top: 4em; }
+  #city-data .passenger-block-02 .large-copy,
+  #city-data .driver-block-02 .large-copy,
+  #city-data .driver-block-03 .large-copy,
+  #city-data .driver-block-04 .large-copy,
+  #city-data .city-block-01 .large-copy,
+  #city-data .city-block-02 .large-copy,
+  #city-data .city-block-03 .large-copy {
+    margin-bottom: 1em; }
+  #city-data .driver-block-03,
+  #city-data .driver-block-04 {
+    margin-top: 6em; }
+  #city-data .block-end {
+    margin-bottom: 8em; }
+  #city-data [class*="-block-01"] {
+    margin-top: 8em; }
+  #city-data .block-end {
+    margin-bottom: 20em; }
+  #city-data .driver-block-01 .large-copy,
+  #city-data .driver-block-02 .large-copy,
+  #city-data .driver-block-03 .large-copy,
+  #city-data .driver-block-04 .large-copy {
+    color: #ff00be !important; }
+  @media only screen and (max-width: 600px) {
+    #city-data .passenger-block-01,
+    #city-data .passenger-block-02,
+    #city-data .city-block-01,
+    #city-data .city-block-02,
+    #city-data .city-block-03,
+    #city-data .driver-block-01,
+    #city-data .driver-block-02,
+    #city-data .driver-block-03,
+    #city-data .driver-block-04 {
+      padding-left: .5em;
+      padding-top: .5em; } }
+  @media only screen and (min-width: 600px) {
+    #city-data .passenger-block-01,
+    #city-data .passenger-block-02,
+    #city-data .city-block-01,
+    #city-data .city-block-02,
+    #city-data .city-block-03,
+    #city-data .driver-block-01,
+    #city-data .driver-block-02,
+    #city-data .driver-block-03,
+    #city-data .driver-block-04 {
+      padding-left: 2em;
+      padding-top: 1em; } }
+  @media only screen and (min-width: 992px) {
+    #city-data .passenger-block-01,
+    #city-data .passenger-block-02,
+    #city-data .city-block-01,
+    #city-data .city-block-02,
+    #city-data .city-block-03,
+    #city-data .driver-block-01,
+    #city-data .driver-block-02,
+    #city-data .driver-block-03,
+    #city-data .driver-block-04 {
+      padding-left: 2em; } }
+  #city-data .passenger-block-01 .intro-copy,
+  #city-data .passenger-block-02 .intro-copy,
+  #city-data .city-block-01 .intro-copy,
+  #city-data .city-block-02 .intro-copy,
+  #city-data .city-block-03 .intro-copy,
+  #city-data .driver-block-01 .intro-copy,
+  #city-data .driver-block-02 .intro-copy,
+  #city-data .driver-block-03 .intro-copy,
+  #city-data .driver-block-04 .intro-copy {
+    padding-right: 1em;
+    padding-bottom: 2em; }
+  #city-data .city-block-01 h2,
+  #city-data .city-block-02 h2 {
+    color: #4722E3; }
+  #city-data .city-block-01 .large-copy,
+  #city-data .city-block-02 .large-copy {
+    color: #ff00be !important; }
+  #city-data .column-driver-image-01 .inline-image {
+    margin-top: -7em; }
+  #city-data .column-passenger-image .inline-image {
+    margin-top: -2em; }
+  #city-data .column-city-image-01 .inline-image {
+    margin-top: -7em; }
+  #city-data .driver-block-03 .col-xs-4 {
+    margin-left: -11px;
+    margin-right: 4px; }
+  #city-data #national {
+    margin-top: -54px; }
+
+/*==============================
+---- KEYFRAME ANIMATIONS ----
+==============================*/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+
+@-webkit-keyframes hopUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); } }
+
+@keyframes hopUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); } }
+
+@-webkit-keyframes hopRight {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); } }
+
+@keyframes hopRight {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  25% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); } }
+
+@-webkit-keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@-webkit-keyframes menuUpIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes menuUpIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes menuRightIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@keyframes menuRightIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+
+@-webkit-keyframes menuPopIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0) translateX(200%);
+    transform: scale(0) translateX(200%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0); } }
+
+@keyframes menuPopIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0) translateX(200%);
+    transform: scale(0) translateX(200%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0); } }
+
+@-webkit-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@-webkit-keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+.jumbotron {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fadeIn;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-name: fadeIn;
+  -webkit-transition-timing-function: ease-in;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.5s;
+  -o-animation-name: fadeIn;
+  -webkit-transition-timing-function: ease-in;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  -webkit-transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */ }
+
+.inner-content {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-name: slideLeftIn;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.6s;
+  -moz-animation-name: slideLeftIn;
+  -webkit-transition-timing-function: ease-in;
+  -moz-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.6s;
+  -o-animation-name: slideLeftIn;
+  -webkit-transition-timing-function: ease-in;
+  -o-animation-fill-mode: both;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0s;
+  animation-duration: 0.6s;
+  animation-name: slideLeftIn;
+  -webkit-transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  /* this prevents the animation from restarting! */ }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dd,
+dt,
+td,
+tr,
+.flex-middle,
+.large-number {
+  opacity: 1;
+  transition: opacity .5s ease-out; }
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading ul,
+.wf-loading ol,
+.wf-loading li,
+.wf-loading dd,
+.wf-loading dt,
+.wf-loading td,
+.wf-loading tr,
+.wf-loading .flex-middle,
+.wf-loading .inner-content,
+.wf-loading .large-number {
+  opacity: 0; }
+
+/* ============================= */
+/* ======= MEDIA QUERIES ======= */
+/* ============================= */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1100px; }
+  .driver-block-03 {
+    margin-left: -30px; }
+  .col-lg-5 {
+    width: 33%; }
+  .driver-block-03,
+  .driver-block-04 {
+    margin-right: 90px; }
+  #national-buckets .section {
+    padding-top: 3em; }
+  .jumbotron h1 {
+    font-size: 2.2rem; }
+  .jumbotron .jumbo-inner-contain {
+    top: 52%; }
+  .jumbotron .jumbo-inner-contain {
+    top: 49%; }
+  [data-jumbotronasaurus=true] #page-header {
+    height: 62%; }
+  #lyft-community {
+    padding-bottom: 4em; }
+  #city-nav .current-section, #city-nav .prev-section, #city-nav .next-section {
+    font-size: 2.5rem; }
+  #city-nav .navbar-toggle-container .navbar-toggle {
+    margin: 36px 0px 15px 15px; }
+  #city-data .passenger-block-01 {
+    padding-top: 2em; }
+  #national-passenger .passenger-block-01 .large-copy {
+    margin-top: .75em; }
+  #national-buckets {
+    padding-top: 4em; } }
+
+@media only screen and (max-width: 1199px) {
+  .jumbotron h1 {
+    font-size: 36px;
+    font-size: 2.25rem; }
+  [data-jumbotronasaurus=true] #page-header {
+    height: 70%; }
+  #city-nav .current-section, #city-nav .prev-section, #city-nav .next-section {
+    font-size: 2rem; }
+  #city-nav .navbar-toggle-container .navbar-toggle {
+    margin: 28px 0px 15px 15px; }
+  #national-passenger .passenger-block-01 .large-copy {
+    margin-top: 0em; }
+  #national-passenger.column-passenger-image .inline-image {
+    margin-top: 0em; }
+  #national-buckets {
+    padding-top: 4em; } }
+
+@media only screen and (max-width: 991px) {
+  h1 {
+    font-size: 36px;
+    font-size: 2.25rem; }
+  h2 {
+    font-size: 48px;
+    font-size: 3rem; }
+  h3 {
+    font-size: 30px;
+    font-size: 1.875rem; }
+  body,
+  p {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  .site-logo .logo-element:before,
+  .site-logo a:before {
+    width: 160px;
+    height: 32px; }
+    .site-logo .logo-element:before a,
+    .site-logo a:before a {
+      padding-top: 10px; }
+  .inline-image {
+    width: 60%; }
+  .passenger-impact .inline-image {
+    width: 70%; }
+  #national-buckets .col-md-4 {
+    padding-top: 4em; }
+  #national-buckets .col-md-4:first-of-type {
+    padding-top: 0em; }
+  #city-data [class*="-block-01"] {
+    margin-top: 0em; }
+  #lyft-community .col-md-3 {
+    padding-top: 2em; }
+  .jumbotron {
+    background-image: none;
+    padding-bottom: 2em; }
+    .jumbotron .flex-right-middle {
+      display: block; }
+    .jumbotron .flex-right-middle {
+      display: block; }
+    .jumbotron h1 {
+      font-size: 35px;
+      font-size: 2.1875rem; }
+    .jumbotron h1,
+    .jumbotron p {
+      text-align: left; }
+    .jumbotron p {
+      margin-top: 35px; }
+    .jumbotron .request-button {
+      text-align: center; }
+    .jumbotron #header-video {
+      display: none; }
+  section {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em; }
+  .inner-content {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-name: slideUpIn;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+    /* this prevents the animation from restarting! */
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 0.6s;
+    -moz-animation-name: slideUpIn;
+    -webkit-transition-timing-function: ease-in;
+    -moz-animation-fill-mode: both;
+    /* this prevents the animation from restarting! */
+    -o-animation-delay: 0s;
+    -o-animation-duration: 0.6s;
+    -o-animation-name: slideUpIn;
+    -webkit-transition-timing-function: ease-in;
+    -o-animation-fill-mode: both;
+    /* this prevents the animation from restarting! */
+    animation-delay: 0s;
+    animation-duration: 0.6s;
+    animation-name: slideUpIn;
+    -webkit-transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    /* this prevents the animation from restarting! */ }
+  .jumbo-inner-contain {
+    padding-top: 100px; }
+  .passenger-block-01 {
+    padding-top: 1.5em; } }
+
+@media only screen and (max-width: 768px) {
+  #national-map .city-selection {
+    -webkit-column-count: 3;
+            column-count: 3; }
+  .jumbotron h1 {
+    font-size: 34px;
+    font-size: 2.125rem; }
+  .jumbotron h5 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .jumbotron p {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .jumbotron a {
+    font-size: 16px;
+    font-size: 1rem; }
+  .main-driver-image, .main-city-image, .main-passenger-image {
+    height: 640px; }
+  .main-driver-image {
+    background-position: 0%; }
+  .main-passenger-image {
+    background-position: 80%; }
+  #city-data .passenger-block-01 > .row,
+  #city-data .driver-block-01 > .row,
+  #city-data .city-block-01 > .row {
+    margin-top: 2em; }
+  #national-map .large-map-container .large-map {
+    min-height: 250px; }
+  .jumbo-inner-contain {
+    padding-right: 17px; }
+  .col-md-12,
+  .col-md-6 {
+    padding-left: 1px;
+    padding-right: 0px; }
+  .inline-image {
+    width: 75%; }
+  .col-xs-7 {
+    /* padding-left: 0px;*/ }
+  #city-data .driver-block-02 div,
+  #city-data .driver-block-03 div,
+  #city-data .driver-block-04 div,
+  #city-data .passenger-block-01 div,
+  #city-data .passenger-block-02 div,
+  #city-data .passenger-block-03 div,
+  #city-data .city-block-02 div,
+  #city-data .city-block-03 div {
+    padding-left: 1px; }
+  #city-data .driver-block-01 .intro-copy {
+    padding-left: 0px; }
+  #city-data .block-end {
+    margin-bottom: 1em; }
+  #city-data .driver-block-02 .large-copy,
+  #city-data .passenger-block-02 .large-copy {
+    margin-top: 39px;
+    margin-bottom: 23px; }
+  #city-data .driver-block-02 .large-copy,
+  #city-data .driver-block-04 .large-copy {
+    font-size: 45px;
+    font-size: 2.8125rem; }
+  #city-data .driver-block-03,
+  #city-data .driver-block-04 {
+    margin-top: 0em; }
+  #national-buckets {
+    padding-top: 6em; } }
+
+@media only screen and (max-width: 600px) {
+  .jumbotron h1 {
+    font-size: 30px;
+    font-size: 1.875rem; }
+  #national-map .city-selection {
+    -webkit-column-count: 2;
+            column-count: 2;
+    margin-left: -12px;
+    margin-right: -20px; }
+  .col-xs-4, .col-xs-5 {
+    margin-right: 0px; }
+    .col-xs-4 row, .col-xs-5 row {
+      margin-right: -5px; }
+  .large-copy {
+    font-size: 40px;
+    font-size: 2.5rem; }
+  .passenger-block-01 .large-copy {
+    font-size: 30px;
+    font-size: 1.875rem; }
+  .passenger-block-02 .large-copy {
+    font-size: 40px;
+    font-size: 2.5rem; }
+  .driver-block-01 .large-copy {
+    font-size: 37px;
+    font-size: 2.3125rem; }
+  .driver-block-02 .large-copy #city-data .large-number + p:not(.sub-number) {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .driver-block-02 .large-copy .footer-services .get-app-btn {
+    margin: 3.5em auto 0;
+    max-width: 280px; }
+  .driver-block-02 .large-copy .footer-segment,
+  .driver-block-02 .large-copy .footer-segment ul,
+  .driver-block-02 .large-copy .footer-segment li {
+    width: 100%;
+    text-align: center;
+    padding: 0; }
+  .driver-block-02 .large-copy .footer-segment div {
+    margin-right: 0; }
+  .city-block-02 .large-copy {
+    font-size: 40px;
+    font-size: 2.5rem; }
+  #national-passenger .passenger-block-01 .large-copy {
+    margin-top: 2em;
+    margin-left: 1em; } }
+
+@media only screen and (max-width: 400px) {
+  .jumbotron h1 {
+    font-size: 26px;
+    font-size: 1.625rem; }
+  [data-jumbotronasaurus=true] #page-header {
+    height: 90%; } }
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-minimal {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative; }
+
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-minimal .odometer-digit {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative; }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  visibility: hidden; }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon {
+  display: block; }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden; }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0); }
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-minimal .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute; }
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s; }
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-minimal.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-minimal.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-minimal.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0); }

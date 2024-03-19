@@ -1,0 +1,104 @@
+* {
+    font-family: "Gotham SSm A", "Gotham SSm B", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif !important
+}
+
+h1, h2 {
+	letter-spacing: -.05em;
+	
+}
+
+
+
+.jumbotron {
+	background-color: #ee307c;
+	border-bottom: black 5px solid;
+	margin-bottom: 5px;
+	padding-bottom: 60px;
+	padding-top: 100px;
+}
+
+.jumbotron h1 {
+	color: #ffffff;
+}
+
+.jumbotron p {
+	color: #ffffff;
+}
+
+.stripe {
+	border-top: #ee307c 5px solid;
+	margin-top: 5px;
+	padding-top: 40px;
+
+}
+
+h2 {
+	text-align: center;
+	color: #ee307c;
+}
+
+
+.zombie-nav {
+	background-color: #ee307c;
+	border-bottom: none;
+}
+
+
+.logo {
+  display: block;
+  width: 150px;
+  
+  background-repeat: no-repeat !important;
+  background: url(../img/lzd-logo.svg);
+  background-size: 150px ;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.tag-line {
+	  display: block;
+  width: 250px;
+  height:70px;
+  background-repeat: no-repeat !important;
+  background: url(../img/tagline.svg);
+  background-size: 250px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+	
+}
+
+.row {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.footer-style {
+	margin-right: 10px;
+	padding-right: 20px;
+	
+	float: right;
+	
+}
+
+.twitter-icon {
+	width:20px;
+	margin: 5px;
+	margin-left: 10px;
+}
+
+#zombie-delivery {
+	
+	padding-top: 30px;
+}
+
+.z-images img{
+	padding-right:10px;
+}
+
+a {
+	color: #ee307c;
+	font-weight: 600;
+}

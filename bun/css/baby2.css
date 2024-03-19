@@ -1,0 +1,371 @@
+
+body {
+	background-color: #fffaec;
+	margin: 0px;
+	font-family: "ltc-bodoni-175-1","ltc-bodoni-175-2", Georgia;
+	overflow-x: hidden;
+}
+
+
+.full_page {
+}
+
+.text_link, .date_entry, .comment_text{
+    text-decoration: none;
+    position: relative;
+    z-index: 120;
+
+    font-decoration: none;
+  
+   
+}
+
+.asterix {
+	position: relative;
+    z-index: 130;
+    color: #65b8d1;
+    width: 50px;
+    height: 50px;
+	font-size: 40px;
+	font-family: "franklin-gothic-ext-comp-urw-1","franklin-gothic-ext-comp-urw-2",sans-serif;
+	font-style: normal;
+
+
+}
+
+.asterix a, .asterix a:link {
+  text-decoration: none;
+  color: #65b8d1;
+}
+
+.asterix a:hover {
+    text-decoration: none;
+    color: #58585b;
+}
+
+
+
+
+.comment_text {
+	color: #58585b;
+	font-family: "ltc-bodoni-175-1","ltc-bodoni-175-2", Georgia;
+    width: 60%;
+    left: 22%;
+    font-style: italic;
+    font-size: 17.5px;
+
+}
+
+.date_entry {
+	color: #58585b;
+	
+	font-size: 60px;
+	font-family: "LeagueOstrich-Bold", "franklin-gothic-ext-comp-urw-1","franklin-gothic-ext-comp-urw-2",sans-serif;
+	font-style: normal;
+	width: 200px;
+	
+}
+
+
+.text_link {
+	font-family: "ltc-bodoni-175-1","ltc-bodoni-175-2", Georgia;
+   	width: 100px;
+    font-style: italic;
+    font-size: 17.5px;
+
+
+}
+
+.text_link a, .text_link a:link {
+  text-decoration: none;
+  color: #58585b;
+}
+
+.text_link a:hover {
+    text-decoration: none;
+    color: #65b8d1;
+}
+
+
+
+.header_gr {
+   background-color: #12aa9d;
+   left: 0%;
+   width: 100%;
+   height: 50px;
+   margin-top: 50px; 
+   margin-left: 0px; 
+   z-index: 116;
+}
+
+
+
+.content_well {
+	
+
+	margin-left: 30%;
+	
+
+	position: relative;
+	
+
+	margin-top: -80px;
+
+	
+	
+
+}
+
+
+
+.main_img {
+
+	margin: -20px 0px 0px 85px;
+	clear: both;
+	width: 220px;
+	 position: relative;
+
+}
+
+.divider_img {
+    clear: both;
+	width: 200px;
+	position: relative;
+}
+
+.image_wrapper {
+	
+	margin: -60px 0px 0px -168px;
+	clear: both;
+	
+	position: relative;
+
+
+
+}
+
+
+.count_wrapper {
+	margin: -20px 0px 0px 88px;
+	clear: both;
+	
+	position: relative;
+
+
+
+}
+
+
+.post_wrapper {
+	
+	position: relative;
+	
+	border-width: 20px;
+
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 0px;
+	
+}
+
+
+
+.indi_post {
+
+	text-align: center;
+	width: 100%;
+	
+	border-color: #00a651;
+	border-width: 4px;
+	border-style: solid;
+	background-color: #ffffff;
+	
+	
+	-moz-box-shadow:    0 0 4px rgba(128,128,128,.75);
+    -webkit-box-shadow: 0 0 4px rgba(128,128,128,.75);
+    box-shadow:         0 0 4px rgba(128,128,128,.75);
+  
+
+
+}
+
+.flag_under {
+	
+	margin-left: 0px;
+	
+}
+
+.more_flag {
+	position: fixed;
+	z-index: 921;
+	left: 20px;
+	bottom: 15px;
+
+}
+
+
+
+ h1 {
+ 	padding: 0px;
+ 	
+ 	margin: 10px 0px 0px 0px;
+	color: #65b9d2;
+	text-transform: uppercase;
+	line-height: 36px;
+	font: 36px 'LeagueGothic','ArvoRegular', Georgia, serif;
+	
+}
+
+h2 {
+	line-height: 32px;
+	font: 30px 'ArvoRegular', Georgia, serif; 
+	 
+	color: #58595b;
+}
+
+p {
+	font-family: 'Muli', sans-serif; 
+                 
+               
+    font-size: 14px;
+               
+	color: #58595b;
+
+}
+
+.noscript_text {
+ 
+    line-height: 380%;
+    font-style: italic;
+    color:#58585b;
+    text-indent: 43px;
+}
+
+.noscript_img {
+    margin-top: 0px;
+    margin-left: 0px;
+ 
+}
+
+
+
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../../type/league-gothic-fontfacekit/webfonts/League_Gothic-webfont.eot');
+    src: url('../../type/league-gothic-fontfacekit/webfonts/League_Gothic-webfont.eot?iefix') format('eot'),
+         url('../../type/league-gothic-fontfacekit/webfonts/League_Gothic-webfont.woff') format('woff'),
+         url('../../type/league-gothic-fontfacekit/webfonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('../../type/league-gothic-fontfacekit/webfonts/LeaguegothicNumberOne.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'LeagueOstrich-Bold';
+    src: url('../../type/League_Ostrich/webfonts/ostrich-bold-webfont.eot');
+    src: url('../../type/League_Ostrich/webfonts/ostrich-bold-webfont.eot?iefix') format('eot'),
+         url('../../type/League_Ostrich/webfonts/ostrich-bold-webfont.woff') format('woff'),
+         url('../../type/League_Ostrich/webfonts/ostrich-bold-webfont.ttf') format('truetype'),
+         url('../../type/League_Ostrich/webfonts/ostrich-bold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
+
+
+@font-face {
+    font-family: 'ArvoRegular';
+    src: url('../../arvo-fontfacekit/Arvo-Regular-webfont.eot');
+    src: url('../../arvo-fontfacekit/Arvo-Regular-webfont.eot?iefix') format('eot'),
+         url('../../arvo-fontfacekit/Arvo-Regular-webfont.woff') format('woff'),
+         url('../../arvo-fontfacekit/Arvo-Regular-webfont.ttf') format('truetype'),
+         url('../../arvo-fontfacekit/Arvo-Regular-webfont.svg#webfontau9vOdrl') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ArvoItalic';
+    src: url('../../arvo-fontfacekit/Arvo-Italic-webfont.eot');
+    src: url('../../arvo-fontfacekit/Arvo-Italic-webfont.eot?iefix') format('eot'),
+         url('../../arvo-fontfacekit/Arvo-Italic-webfont.woff') format('woff'),
+         url('../../arvo-fontfacekit/Arvo-Italic-webfont.ttf') format('truetype'),
+         url('../../arvo-fontfacekit/Arvo-Italic-webfont.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Chunkfive';
+    src: url('../../type/chunk-fontfacekit/webfonts/Chunkfive-webfont.eot');
+    src: url('../../type/chunk-fontfacekit/webfonts/Chunkfive-webfont.eot?iefix') format('eot'),
+         url('../../type/chunk-fontfacekit/webfonts/Chunkfive-webfont.woff') format('woff'),
+         url('../../type/chunk-fontfacekit/webfonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('../../type/chunk-fontfacekit/webfonts/Chunkfive-webfont.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'LeagueScript';
+    src: url('../../type/league-script-fontfacekit/webfonts/LeagueScriptNumberOne-webfont.eot');
+    src: url('../../type/league-script-fontfacekit/webfonts/LeagueScriptNumberOne-webfont.eot?iefix') format('eot'),
+         url('../../type/league-script-fontfacekit/webfonts/LeagueScriptNumberOne-webfont.woff') format('woff'),
+         url('../../type/league-script-fontfacekit/webfonts/LeagueScriptNumberOne-webfont.ttf') format('truetype'),
+         url('../../type/league-script-fontfacekit/webfonts/LeagueScriptNumberOne.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'LeagueJunction';
+    src: url('../../type/league-junction/webfonts/Junction-webfont.eot');
+    src: url('../../type/league-junction/webfonts/Junction-webfont.eot?iefix') format('eot'),
+         url('../../type/league-junctionwebfonts/Junction-webfont.woff') format('woff'),
+         url('../../type/league-junction/webfonts/Junction-webfont.ttf') format('truetype'),
+         url('../../type/league-junction/webfonts/Junction-webfont.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LeagueFanwood';
+    src: url('../../type/league-fanwood/webfonts/fanwood-webfont.eot');
+    src: url('../../type/league-fanwood/webfonts/fanwood-webfont.eot?iefix') format('eot'),
+         url('../../type/league-fanwoodwebfonts/fanwood-webfont.woff') format('woff'),
+         url('../../type/league-fanwood/webfonts/fanwood-webfont.ttf') format('truetype'),
+         url('../../type/league-fanwood/webfonts/fanwood-webfont.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LeagueGoudy';
+    src: url('../../type/league-goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.eot');
+    src: url('../../type/league-goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.eot?iefix') format('eot'),
+         url('../../type/league-goudy-bookletterwebfonts/goudy_bookletter_1911-webfont.woff') format('woff'),
+         url('../../type/league-goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.ttf') format('truetype'),
+         url('../../type/league-goudy-bookletter/webfonts/goudy_bookletter_1911-webfont.svg#webfontvBl98OZ1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*/
+
+ 

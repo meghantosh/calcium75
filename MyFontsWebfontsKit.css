@@ -1,0 +1,42 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3464628, 2017-10-15T02:06:45-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Arquitecta-Book by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/arquitecta/book/
+ * Copyright: Copyright (c) 2013 by Miguel &amp; Daniel Hern&#x00E1;ndez. All rights reserved.
+ * 
+ * Webfont: Arquitecta-Medium by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/arquitecta/medium/
+ * Copyright: Copyright (c) 2013 by Miguel &amp; Daniel Hern&#x00E1;ndez. All rights reserved.
+ * 
+ * Webfont: HernandezNiu-UltraBold by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/hernandez-niu/ultra-bold/
+ * Copyright: Copyright &#x00A9; 2016 by Daniel Hernandez. All rights reserved.
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3464628
+ * Licensed pageviews: 10,000
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34ddb4");
+
+  
+@font-face {font-family: 'Arquitecta-Book';src: url('webfonts/34DDB4_0_0.eot');src: url('webfonts/34DDB4_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34DDB4_0_0.woff2') format('woff2'),url('webfonts/34DDB4_0_0.woff') format('woff'),url('webfonts/34DDB4_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Arquitecta-Medium';src: url('webfonts/34DDB4_1_0.eot');src: url('webfonts/34DDB4_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34DDB4_1_0.woff2') format('woff2'),url('webfonts/34DDB4_1_0.woff') format('woff'),url('webfonts/34DDB4_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HernandezNiu-UltraBold';src: url('webfonts/34DDB4_2_0.eot');src: url('webfonts/34DDB4_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34DDB4_2_0.woff2') format('woff2'),url('webfonts/34DDB4_2_0.woff') format('woff'),url('webfonts/34DDB4_2_0.ttf') format('truetype');}
+ 

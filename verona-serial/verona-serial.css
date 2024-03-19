@@ -1,0 +1,34 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3585147, 2018-05-21T17:56:44-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: VeronaSerial-Bold by SoftMaker
+ * URL: https://www.myfonts.com/fonts/softmaker/verona-serial/bold/
+ * 
+ * Webfont: VeronaSerial-Medium by SoftMaker
+ * URL: https://www.myfonts.com/fonts/softmaker/verona-serial/medium/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3585147
+ * Licensed pageviews: 1,000,000
+ * Webfonts copyright: Copyright (c) 2012 by SoftMaker Software GmbH and its licensors. All rights reserved.
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/36b47b");
+
+  
+@font-face {font-family: 'VeronaSerial-Bold';src: url('webfonts/36B47B_0_0.eot');src: url('webfonts/36B47B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/36B47B_0_0.woff2') format('woff2'),url('webfonts/36B47B_0_0.woff') format('woff'),url('webfonts/36B47B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'VeronaSerial-Medium';src: url('webfonts/36B47B_1_0.eot');src: url('webfonts/36B47B_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/36B47B_1_0.woff2') format('woff2'),url('webfonts/36B47B_1_0.woff') format('woff'),url('webfonts/36B47B_1_0.ttf') format('truetype');}
+ 

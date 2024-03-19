@@ -1,0 +1,267 @@
+    @font-face {
+        font-family: 'Relative Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url(https://assets.nearbyhq.com/fonts/relative-pro/relative-book-pro.woff2?v=1.0) format('woff2'), url(https://assets.nearbyhq.com/fonts/relative-pro/relative-book-pro.woff?v=1.0) format('woff');
+    }
+    
+    @font-face {
+        font-family: 'Relative Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: block;
+        src: url(https://assets.nearbyhq.com/fonts/relative-pro/relative-bold-pro.woff2?v=1.0) format('woff2'), url(https://assets.nearbyhq.com/fonts/relative-pro/relative-bold-pro.woff?v=1.0) format('woff');
+    }
+    /*--------------MAIN -------------------------*/
+    
+    * {
+        transform-origin: 50% 50%;
+    }
+    
+    body {
+        margin: 0 0;
+        font-family: 'Relative Pro', sans-serif;
+        background-color: #2E2F4A;
+        color: white;
+    }
+    
+    h1 {
+        color: white;
+        font-size: 3.9em;
+    }
+    
+    h2 {
+        font-size: 2.75em;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1em;
+        line-height: 1.4;
+        font-weight: 300;
+        font-family: 'Relative Pro', sans-serif;
+        color: #ffffff;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    /*--------------INTRO PAGE -------------------------*/
+    
+    .container {
+        /*width: 100%;
+        height: 100%;*/
+        margin: auto;
+        text-align: center;
+        /*border: 2px solid #2E2F4A;*/
+    }
+    
+    .message a {
+        color: #DAC4A5;
+    }
+    
+    .message a:hover {
+        color: #49C5CD;
+    }
+    
+    a {
+        color: #C7A26C;
+        text-decoration: none;
+        transition: .2s ease-out;
+    }
+    
+    a:hover {
+        color: #F2EFEC;
+    }
+    
+    .header {
+        z-index: 5;
+        /*position: fixed;
+    left: 0px;*/
+        padding-top: 30px;
+        width: 100%;
+        transition: .3s ease-out;
+        background-color: #2E2F4A;
+    }
+    
+    .fix,
+    .bottom {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .75em;
+        font-weight: 700;
+        padding: 1em;
+        transition: .3s ease-out;
+        /*display: inline-block;*/
+        margin: 0 3em 3em 3em;
+        color: #C7A26C;
+        line-height: 1rem;
+        letter-spacing: .1px;
+    }
+    
+    .bottom {
+        display: none;
+    }
+    
+    .top {
+        display: inline-block;
+    }
+    
+    .header>.fix:nth-child(2) {
+        float: right;
+    }
+    
+    .header>.fix:first-child {
+        float: left;
+        padding: 0em 0em 0em 2em;
+    }
+    /*--------------SVG -------------------------*/
+    
+    .illustration {
+        position: relative;
+        /* width: 100%;
+       transform: var(--tw-transform);
+        --tw-translate-x: -50%;
+        left: 50%;*/
+    }
+    
+    .illustration-holder {
+        overflow: hidden;
+        display: flex;
+        padding: 0 auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+        width: 100%;
+    }
+    /*--------------SECTIONS -------------------------*/
+    
+    .message {
+        padding-top: 4em;
+        padding-bottom: 1em;
+        margin: 1em auto 1em;
+        z-index: 10;
+    }
+    
+    .message p {
+        max-width: 500px;
+        margin: auto;
+    }
+    
+    .stores h2,
+    .message h2 {
+        -webkit-column-span: all;
+        -moz-column-span: all;
+        column-span: all;
+    }
+    
+    .hr {
+        border-top: 1px solid #908F9B;
+        margin: 0 10% 0 10%;
+        width: 80%;
+        display: none;
+    }
+    
+    .stores {
+        max-width: 1258px;
+        margin: auto;
+        padding-top: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 1em;
+        z-index: 10;
+        -webkit-column-count: 5;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 5;
+        /* Firefox */
+        column-count: 5;
+        font-size: .8em;
+    }
+    
+    .stores li {
+        color: #C7A26C;
+    }
+    
+    li {
+        list-style-type: none;
+        list-style-position: outside;
+        margin-bottom: 15px;
+    }
+    /* ===========================================================================
+	Media Queries
+ ============================================================================= */
+    /* desktop*/
+    /* Tablets */
+    
+    @media screen and (max-width: 1023px) {
+        .hr {
+            display: block;
+        }
+        .bottom {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            float: none;
+            padding-bottom: 1em;
+        }
+        .header .top {
+            display: none;
+        }
+        .header>.fix:first-child {
+            float: none;
+            display: block;
+            margin: auto;
+        }
+        .stores {
+            -webkit-column-count: 3;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 3;
+            /* Firefox */
+            column-count: 3;
+            text-align: left;
+            padding-top: 30px;
+            padding-left: 10%;
+            padding-right: 5%;
+            padding-bottom: 0em;
+            z-index: 10;
+        }
+        .message {
+            padding-top: 2em;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 2em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+    }
+    /* Phones */
+    
+    @media screen and (max-width: 600px) {
+        .bottom {
+            padding-bottom: 2.3em;
+        }
+        .message {
+            padding-top: 2em;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .stores {
+            -webkit-column-count: 2;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 2;
+            /* Firefox */
+            column-count: 2;
+        }
+        h1 {
+            line-height: 1.1;
+            font-size: 3.1em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        p {
+            font-size: .95em;
+            letter-spacing: 1.25;
+        }
+    }

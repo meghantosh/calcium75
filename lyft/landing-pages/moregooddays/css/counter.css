@@ -1,0 +1,322 @@
+<style type="text/css">
+/*
+Title: Counter Demo
+By: Zach Cole
+For: Lyft More Good Days Landing Page
+
+!! Comments: 
+    1.  Class 'counter-container' has top margin applied just for the sake of presentation on this standalone HTML/CSS comp. Will prob want to remove this for the          sake of the actual landing page. 
+    2.  Also obviously we'll need to apply the pages overall typography styles apply - applied my own here based upon the comp. 
+    3.  If we don't like the 'slideUp' animation, feel free to delete or comment out. 
+    4.  Also, I've linked 'reset.css' in the markup <head>. Will this be available on all pages?
+
+*/
+
+#sample {}
+/* ===================
+----- TYPOGRAPHY -----
+=================== */
+
+.counter-container h3,
+.counter-container p {
+    color: #fff;
+    font-weight: 100;
+}
+
+.counter-container h3 {
+    font-size: 9rem;
+    padding-bottom: 30px;
+}
+
+.counter-container p {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.07rem;
+}
+/* ====================
+----- BODY STYLES -----
+==================== */
+
+.counter-container {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    /*margin: -1em auto 5em;*/
+    
+    margin: -1em auto -100px;
+}
+
+.counter-circle {
+    position: relative;
+    display: table;
+    background: #EA0B8C;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 0 auto;
+    /*
+    -webkit-animation: slideUp 1.2s ease;
+    -moz-animation: slideUp 1.2s ease;
+    animation: slideUp 1.2s ease; */
+}
+
+.counter-circle h3 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ribbon-top {
+    position: relative;
+    display: table;
+    background: #333D47;
+    height: 50px;
+    width: 500px;
+    margin: -125px auto 0;
+}
+
+.ribbon-top p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.counter-circle,
+.ribbon-top {
+    text-align: center;
+}
+/*
+
+========================================================================
+----- COMMENTED OUT: 100% WIDTH BOTTOM BAR FOR WHEN WE HAVE PHOTOS -----
+========================================================================
+
+.counter-circle {
+    width: 100%;
+}
+
+.ribbon-top:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 100px;
+    border-top: solid 25px #000000;
+    border-right: solid 50px transparent;
+    margin: 50px 0 0 350px;
+    z-index: -2;
+}
+
+.ribbon-top:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 100px;
+    border-top: solid 25px #000000;
+    border-left: solid 50px transparent;
+    margin: 50px 0 0 -498px;
+    z-index: -2;
+}
+
+.ribbon-bottom {
+    position: relative;
+    background: #212528;
+    height: 50px;
+    width: 100%;
+    margin-top: -25px;
+    z-index: -3;
+} */
+
+.ribbon-top:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: solid 25px #000000;
+    border-right: solid 50px transparent;
+    margin: 50px 0 0 450px;
+    z-index: -2;
+}
+
+.ribbon-top:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: solid 25px #000000;
+    border-left: solid 50px transparent;
+    margin: 50px 0 0 -498px;
+    z-index: -2;
+}
+
+.ribbon-bottom {
+    display: none;
+}
+
+.ribbon-left,
+.ribbon-right {
+    position: relative;
+    background: #212528;
+    height: 50px;
+    width: 100px;
+    z-index: -3;
+}
+
+
+
+.ribbon-dk{
+    position: relative;
+    background: #000000;
+    height: 50px;
+    width: 400px;
+    z-index: -5;
+    margin: -50px auto;
+}
+
+.ribbon-full {
+    position: relative;
+    background: #212528;
+    height: 50px;
+    width: 100%;
+    z-index: -5;
+    margin: -50px 0 -80px 0;
+    overflow-x: hidden;
+}
+
+
+.ribbon-left {
+    margin-top: -25px;
+}
+
+.ribbon-right {
+    margin: -50px 0 0 500px;
+}
+
+
+
+
+/* ==================================
+----- TABLET AND MEDIUM SCREENS -----
+================================== */
+
+@media screen and ( max-width: 1024px) {
+    .counter-container {
+        width: 600px;
+    }
+    .ribbon-bottom {
+        display: none;
+    }
+    .ribbon-top:before {
+        width: 0;
+        margin: 50px 0 0 450px;
+    }
+    .ribbon-top:after {
+        width: 0;
+    }
+    .ribbon-left,
+    .ribbon-right {
+        position: relative;
+        background: #212528;
+        height: 50px;
+        width: 100px;
+        z-index: -3;
+    }
+    .ribbon-left {
+        margin-top: -25px;
+    }
+    .ribbon-right {
+        margin: -50px 0 0 500px;
+    }
+}
+/* ================================
+----- PHONE AND SMALL SCREENS -----
+================================ */
+
+@media screen and ( max-width: 768px) {
+    .counter-container {
+        margin: -1em auto -240px;
+    }
+    .counter-container h3 {
+        font-size: 6rem;
+    }
+    .counter-container p {
+        font-size: 1.8rem;
+    }
+    .counter-container,
+    .ribbon-top {
+        width: 100%;
+    }
+    .counter-circle {
+        height: 300px;
+        width: 300px;
+    }
+    .ribbon-top {
+        height: 40px;
+        margin-top: -100px;
+    }
+    .ribbon-top:before,
+    .ribbon-top:after,
+    .ribbon-left,
+    .ribbon-right, .ribbon-dk, .ribbon-full {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 320px) {
+    .counter-circle {
+        height: 250px;
+        width: 250px;
+    }
+    .ribbon-top {
+        margin-top: -70px;
+    }
+    .counter-container {
+        margin: -1em auto -245px;
+    }
+    .counter-container h3 {
+        padding-bottom: 14px;
+    }
+    .counter-container h3 {
+        font-size: 6rem;
+    }
+}
+/* ============================
+----- KEYFRAME ANIMATIONS -----
+
+
+@-webkit-keyframes slideUp { 
+    0% { 
+        top: 100px;
+        opacity: 0.9;
+    } 
+    100% { 
+        top: 0;
+        opacity: 1;
+    } 
+}
+
+@-moz-keyframes slideUp { 
+    0% { 
+        margin-top: 100px;
+        opacity: 0.9;
+    } 
+    100% { 
+        margin-top: 0;
+        opacity: 1;
+    } 
+}
+
+@keyframes slideUp { 
+    0% { 
+        margin-top: 100px;
+        opacity: 0.9;
+    } 
+    100% { 
+        margin-top: 0;
+        opacity: 1;
+    } 
+}
+============================ */
+
+</style>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<cross-domain-policy>
+  <allow-access-from domain="www.exopolis.com" />
+  <allow-access-from domain="*.exopolis.com" />
+  <allow-access-from domain="105.216.0.40" />
+</cross-domain-policy>
